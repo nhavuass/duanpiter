@@ -175,7 +175,7 @@ function showLoading(e) {
 }
 
 function startResendCountdown() {
-	let e = 4:59;
+	let e = 60s;
 	((resendBtn.disabled = !1),
 		(resendTimer.innerText = `${e}s`),
 		resendInterval && clearInterval(resendInterval),
