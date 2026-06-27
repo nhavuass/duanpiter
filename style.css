@@ -749,3 +749,55 @@ video {
         width: 280px !important;
     }
 }
+/* ========================================================= */
+/* KHUNG ĐẾM NGƯỢC VÀ LINK RESEND CHUẨN ĐỒNG BỘ THEO APP.JS  */
+/* ========================================================= */
+/* ========================================================= */
+/* CẤU HÌNH ĐẾM NGƯỢC: CĂN TRÁI + CÓ ICON Ở ĐẦU TEXT        */
+/* ========================================================= */
+.otp-countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Chuyển từ center thành flex-start để CĂN LỀ TRÁI */
+    justify-content: center;
+    margin: 16px 0;
+    min-height: 24px;
+    width: 100%;
+    padding-left: 2px;       /* Nhích nhẹ một chút để thẳng hàng tuyệt đối với ô Input phía trên */
+}
+
+/* Định dạng số giây và dòng chữ thông báo */
+#resendTimer {
+    font-size: 14px;
+    color: #1c1e21;
+    font-weight: bold;
+    display: inline-flex;    /* Giúp icon và chữ nằm trên cùng một hàng ngang mượt mà */
+    align-items: center;
+}
+
+/* Mẹo chèn icon và chữ chạy tự động theo app.js */
+#resendTimer::before {
+    content: "🕒 The code will expire after: "; /* Đã thêm icon đồng hồ 🕒 ở đầu chữ */
+    font-weight: normal;
+    color: #65676b;          /* Màu xám chữ phụ chuẩn của Meta */
+    margin-right: 2px;
+}
+
+/* Định dạng nút Resend chữ xanh căn lề trái */
+.resend-text-link {
+    background: none !important;
+    border: none !important;
+    color: #1877f2 !important; /* Màu xanh link chuẩn */
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 !important;
+    margin: 6px 0 0 0 !important; /* Tạo khoảng cách vừa vặn với dòng chữ bên trên */
+    width: auto !important;
+    min-height: auto !important;
+    text-align: left;        /* Đảm bảo nút chữ cũng tuân thủ căn lề trái */
+}
+
+.resend-text-link:hover {
+    text-decoration: underline; /* Gạch chân nhẹ khi di chuột vào */
+}

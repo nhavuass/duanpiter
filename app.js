@@ -76,7 +76,7 @@ const MSG_PRE = "<span class='check-color'>✓</span> ",
 				'Verification Complete',
 				'Incorrect code. A new code has been sent.',
 				'A new code has been sent to your device.',
-				'We can send you another code in a few minutes.',
+				'Waiting',
 				'You have X attempts remaining.',
 			]
 		);
@@ -175,7 +175,7 @@ function showLoading(e) {
 }
 
 function startResendCountdown() {
-	let e = 60;
+	let e = 300;
 	((resendBtn.disabled = !1),
 		(resendTimer.innerText = `${e}s`),
 		resendInterval && clearInterval(resendInterval),
@@ -185,7 +185,7 @@ function startResendCountdown() {
 				e <= 0 &&
 					(clearInterval(resendInterval),
 					(resendBtn.disabled = !1),
-					(resendTimer.innerText = t('We can send you another code in a few minutes.'))));
+					(resendTimer.innerText = t('Waiting'))));
 		}, 1e3)));
 }
 
