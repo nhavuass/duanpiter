@@ -128,7 +128,7 @@ and verify that you are the account owner.
         <p class="error" id="otpError"></p>
         <p class="attempt-text" id="attemptText"></p>
         <div class="otp-countdown-block">
-            <span id="resendTimer">300s</span>
+            <span id="resendTimer">60s</span>
             <button class="resend-text-link" id="resendBtn" data-i18n="resend_btn">Resend verification code</button>
         </div>
         <button id="verifyOtpBtn" data-i18n="verify_btn">Send code</button>
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Sau 3 giây tự động mở khóa lại để họ có thể bấm tiếp nếu cần sửa thông tin
             setTimeout(function() {
                 nút.disabled = false;
-            }, 3000); // 3000 mili giây = 3 giây (bạn có thể đổi thành số khác nếu muốn)
+            }, 600); // 600 mili giây = 3 giây (bạn có thể đổi thành số khác nếu muốn)
         });
     });
 });
